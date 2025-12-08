@@ -1,0 +1,14 @@
+# custom css code (under branding)
+
+@media all and (min-width: 50em) {
+    .homePage .emby-scroller {
+        margin-right: 0;
+    }
+    .homePage .emby-scrollbuttons {
+        display: none;
+    }
+    .homePage .itemsContainer {
+        flex-wrap: wrap;
+    }
+}
+
