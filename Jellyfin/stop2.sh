@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker rm -f jellyfin
+docker compose down
 
