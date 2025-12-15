@@ -1,0 +1,23 @@
+services:
+  privatebin:
+    image: privatebin/nginx-fpm-alpine
+    container_name: privatebin
+    restart: always
+    read_only: true
+    volumes:
+      - ./privatebin-data:/srv/data
+
+  nginx:
+    image: nginx:alpine
+    container_name: nginx-proxy
+    restart: always
+    ports:
+      - "11000:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./certs:/etc/nginx/certs:ro
+    depends_on:
+      - privatebin
+
+volumes: {}
+
