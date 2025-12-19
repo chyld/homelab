@@ -52,7 +52,7 @@ services:
       PHOTOPRISM_DEFAULT_TLS: "true"                 # defaults to a self-signed HTTPS/TLS certificate if no other certificate is available
       PHOTOPRISM_DEFAULT_LOCALE: "en"                # default user interface language, e.g. "en" or "de"
       PHOTOPRISM_PLACES_LOCALE: "local"              # location details language, e.g. "local", "en", or "de"
-      PHOTOPRISM_SITE_URL: "http://localhost:2342/"  # server URL in the format "http(s)://domain.name(:port)/(path)"
+      PHOTOPRISM_SITE_URL: "http://photoprism.voidspace.cc:2342/"  # server URL in the format "http(s)://domain.name(:port)/(path)"
       PHOTOPRISM_SITE_TITLE: "PhotoPrism"
       PHOTOPRISM_SITE_CAPTION: "AI-Powered Photos App"
       PHOTOPRISM_SITE_DESCRIPTION: ""                # meta site description
@@ -82,7 +82,7 @@ services:
       PHOTOPRISM_UPLOAD_ARCHIVES: "true"             # allows upload of zip archives (will be extracted before import)
       PHOTOPRISM_UPLOAD_LIMIT: 5000                  # maximum size of uploaded files and uncompressed archive contents in MB
       PHOTOPRISM_ORIGINALS_LIMIT: 5000               # maximum size of original media files in MB (larger files are skipped)
-      PHOTOPRISM_HTTP_COMPRESSION: "gzip"            # improves transfer speed and bandwidth utilization (none or gzip)
+      PHOTOPRISM_HTTP_COMPRESSION: "none"            # improves transfer speed and bandwidth utilization (none or gzip)
       # PHOTOPRISM_DATABASE_DRIVER: "sqlite"         # SQLite is an embedded database that does not require a separate database server
       PHOTOPRISM_DATABASE_DRIVER: "mysql"            # MariaDB 10.5.12+ (MySQL successor) offers significantly better performance compared to SQLite
       PHOTOPRISM_DATABASE_SERVER: "mariadb:3306"     # MariaDB database server (hostname:port)
@@ -96,9 +96,9 @@ services:
       PHOTOPRISM_VISION_URI: ""                      # client: service URI, e.g. http://hostname/api/v1/vision (leave blank to disable)
       PHOTOPRISM_VISION_KEY: ""                      # client: service access token (for authentication)
       ## Video Transcoding (https://docs.photoprism.app/getting-started/advanced/transcoding/):
-      # PHOTOPRISM_FFMPEG_ENCODER: "software"        # H.264/AVC encoder (software, intel, nvidia, apple, raspberry, or vaapi)
-      # PHOTOPRISM_FFMPEG_SIZE: "1920"               # video size limit in pixels (720-7680) (default: 3840)
-      # PHOTOPRISM_FFMPEG_BITRATE: "64"              # video bitrate limit in Mbps (default: 60)
+      PHOTOPRISM_FFMPEG_ENCODER: "software"        # H.264/AVC encoder (software, intel, nvidia, apple, raspberry, or vaapi)
+      PHOTOPRISM_FFMPEG_SIZE: "1920"               # video size limit in pixels (720-7680) (default: 3840)
+      PHOTOPRISM_FFMPEG_BITRATE: "32"              # video bitrate limit in Mbps (default: 60)
       ## NVIDIA GPU Hardware Acceleration (see https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html):
       # NVIDIA_VISIBLE_DEVICES: "all"
       # NVIDIA_DRIVER_CAPABILITIES: "all"
