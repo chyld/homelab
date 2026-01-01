@@ -11,3 +11,6 @@ Photoprism/database
 Photoprism/storage
 Otterwiki/app-data
 
+Docs/*
+!Docs/bootstrap.sh
+
