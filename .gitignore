@@ -13,4 +13,5 @@ Otterwiki/app-data
 
 Docs/*
 !Docs/bootstrap.sh
+!Docs/README.md
 
