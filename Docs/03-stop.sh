@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker compose down
+DUID=$(id -u) DGID=$(id -g) docker compose down
 
